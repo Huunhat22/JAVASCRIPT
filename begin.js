@@ -23,6 +23,7 @@ var student = {
         var ly = this.scores.physical;
         var van = this.scores.leatuter;
         return (toan + ly + van)/3;
+        // return (this.scores.maths + this.scores.physical + this.scores.leatuter)/3;
     }
 };
 console.log(student);
@@ -36,7 +37,7 @@ console.log('Goi properties (là hàm tính toán):  ',calulate);
 
 console.log('=============== cách thứ 2 ===============');
 // cách thứ 2
-debugger
+
 var student2 = new Object(); // khởi tạo 1 object mới nhưng không có giá trị
 student2.fullname = 'ngo thi binh duong'; // tạo thuộc tính (propeties) cho object thứ 2
 student2.year = '1996';
