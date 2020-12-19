@@ -55,7 +55,51 @@ var studentB = {
     },
     Avergare : calavergare
 }
-console.log(studentA);
 console.log('Total Avergare Subject = ' + studentA.fullname + ' :',studentA.Avergare());
-console.log(studentB);
 console.log('Total Avergare Subject = ' + studentB.fullname + ' :',studentB.Avergare());
+
+console.log('=================== Bài tập vòng lặp For ================');
+// tính tiền tip phải trả khi có các hóa đơn khác nhau.
+// debugger
+function randomArray(n,max){
+    var arr = [];
+    for (var index = 0; index <n ; index++){
+        var number = Math.random() * max;
+        number = Math.round(number);
+        arr.push(number);
+    }
+    return arr;
+}
+
+// console.log(randomArray(3,500));
+//Tao Object
+var Sunlyo = {
+    fullname:'Vo huu nhat',
+    Age: 25,
+    bills:randomArray(10,500),
+    calltips:function(){
+        //số lượng hóa đơn được lấy từ Bills.length
+        this.tips =[];
+        this.totalvalue = [];
+        var length = this.bills.length;
+        // console.log(length);
+
+        for(var index =0; index<length;index++){
+            var percent;
+            var bill = this.bills[index];
+            if (bill < 50) {
+                percent = 0.2;
+            } 
+            else if(bill>=50 && bill<=200){
+                percent = 0.15; 
+            }
+            else{
+                percent = 0.1;
+            }
+            this.tips[index] = bill * percent;
+            this.totalvalue[index] = this.tips[index] + this.bills[index];
+        }
+    }
+}
+Sunlyo.calltips();
+console.log(Sunlyo);
