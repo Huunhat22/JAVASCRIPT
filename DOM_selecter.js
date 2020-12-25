@@ -21,3 +21,44 @@ console.log(Array.from(democlass)); // ép kiểu sang array giá trị trả v�
 democlass = Array.from(democlass);
 console.log(democlass.push(123));  // trả về length của mảng sau khi thêm mới 1 giá trị
 console.log(democlass);
+console.log("================================");
+
+var image = document.querySelector(".imaga_tana");
+
+
+//Set - thay doi thuoc tinh hay du lieu co san
+image.setAttribute("alt","this is a image");
+image.setAttribute("title","Hoa cuc Tana");
+console.log(image);
+
+
+// Get - lay du lieu co san, 
+var eldatatitle = document.querySelectorAll(".demo");
+var temp ='';
+for(var index =0; index < eldatatitle.length; index++){
+    // console.log(eldatatitle[index].getAttribute("data-title"));
+    temp = temp + " "+ eldatatitle[index].getAttribute("class");
+}
+
+console.log("temp : ",temp); // Bi du 1 khoang trang cuoi cung phia sau chuoi
+
+// set gia tri data-title mới cho #demo và cắt khoảng trắng đầu và cuối
+document.getElementById("demo").setAttribute("class",temp.trim());
+console.log(eldatatitle);
+
+//Thực hành thay thế thuộc tính màu sắc với thẻ P với javascript
+var colorskin = document.getElementById("color-skin");
+
+function changeStylecolor(href){
+    colorskin.setAttribute("href",href);
+}
+
+// thêm class cho container
+//box-shadow: 1px -1px 15px 7px
+var containerDiv = document.querySelector(".container");
+
+function changeContainer(type){
+    // console.log(tyle)
+    var newclass = "container " + type;
+    containerDiv.setAttribute("class",newclass);
+}
