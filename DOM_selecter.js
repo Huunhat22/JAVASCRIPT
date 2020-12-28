@@ -23,7 +23,7 @@ console.log(democlass.push(123));  // trả về length của mảng sau khi th�
 console.log(democlass);
 console.log("================================");
 
-var image = document.querySelector(".imaga_tana");
+var image = document.querySelector(".image_tana");
 
 
 //Set - thay doi thuoc tinh hay du lieu co san
@@ -61,4 +61,22 @@ function changeContainer(type){
     // console.log(tyle)
     var newclass = "container " + type;
     containerDiv.setAttribute("class",newclass);
+}
+
+// thay đổi background cho trang web
+var body = document.getElementsByTagName("body")[0]; 
+// khi gọi tới getelementbyTabname thì nó sẽ trả về mảng nhiều phần tử
+// ở ví dụ này , ta chỉ đến phần tử 0 vì chỉ có 1 body
+// console.log(body);
+
+function changeBackgroud(filename){
+    // console.log(filename); trả vể giá trị của biến filename 
+    // console.log(body, filename);
+    if (filename) {
+        // background-image: url(../HTML/hinhanh/bg.jpg);
+        var changestyle = "background-image: url(" + filename + ")";
+        body.setAttribute("Style",changestyle);
+    } else {
+        body.setAttribute("style",filename);
+    }
 }
