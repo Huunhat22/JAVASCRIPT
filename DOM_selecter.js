@@ -9,7 +9,7 @@
     - querySelectorAll(".demo") trả về cho mình nhiều phần tử match với selector truyền vào -> Không phải là array. 
     Muốn ép kiểu về array giống với Array.from()
 */
-debugger
+
 var demoId = document.querySelector("#demo");
 console.log(demoId); // trả về ID đầu tiên mà mình truy xuất Nếu, querySelector là class thì cũng chỉ trả về class đầu tiên mà mình truy xuất
 
@@ -80,3 +80,46 @@ function changeBackgroud(filename){
         body.setAttribute("style",filename);
     }
 }
+
+//Ví dụ function thêm class (classname)
+/*
+    ví dụ về giá trị class cũ là "container abc"
+    thêm mới vào classname = "abc" => sẽ không xử lý
+
+    viết Hàm xóa class
+    ví dụ class cũ đã có "container abc"
+    có một function removeclass(classname) => Muốn xóa classname  ="abc"
+
+    Phải kiểm tra xem class cũ có tồn tại "abc" hay không?
+    1.Nếu có => xử lý chuỗi, xử lý mảng để xóa thu được giá trị cuối cùng sau khi xóa là "container"
+    2. Nếu không có "abc" -> thì sẽ không làm gì.
+*/
+var imge = document.querySelector(".image_tana");
+    // imge.setAttribute('src','../HTML/hinhanh/SunnyThousand.jpg');
+
+function addclass(element , classname){
+    // console.log(element, classname);
+    var oldclass = element.getAttribute('class');
+    if (oldclass) {
+        // khác null -> có nghĩa là đã có class rồi thì nối chuỗi thêm 1 class mới
+        /* chỗ nãy sẽ kiểm lỗi như sau:
+            nếu đã có class đang có khác với class mới - > thì thêm vào
+            ngược lại là bị trùng -> khỏi thêm.
+        */
+       if(oldclass.indexOf(classname) === -1){
+        var newclass = oldclass + " " + classname;
+        element.setAttribute('class',newclass);
+       }
+    } else {
+        // bằng null -> chưa có class thì mình sẽ gán mới
+        element.setAttribute('class',classname);
+    }
+
+}
+
+function removeclass(element, classname){
+
+}
+
+addclass(body,'container__wraper');
+addclass(imge,'image_sunny');
