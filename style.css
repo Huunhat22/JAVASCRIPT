@@ -4,6 +4,7 @@
 
 body{
     font-family: 'Poppins',Arial, Helvetica, sans-serif;
+    
 }
 [data-title]{
     color: aqua;
@@ -14,7 +15,11 @@ body{
     justify-content: space-between;
     align-items: stretch;
     margin: auto;
+<<<<<<< HEAD
     max-width: 1440px;
+=======
+    max-width: 1240px;
+>>>>>>> 24565070c0e024f824557bd43e79ff187c87b147
     padding: 1rem;
 }
 
@@ -31,5 +36,10 @@ p{
 }
 .btn{
     padding: 10px;
+    margin: 20px 0;
+    cursor: pointer;
 }
 
+.image_tana{
+     width: 50%; 
+}
