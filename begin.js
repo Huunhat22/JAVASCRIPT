@@ -18,7 +18,6 @@ var student = {
     },
     calaverage: function(){
         //cac thao tac trong hàm
-        console.log('hello word');
         var toan = this.scores.maths;
         var ly = this.scores.physical;
         var van = this.scores.leatuter;
@@ -26,6 +25,7 @@ var student = {
     }
 };
 console.log(student);
+// student.calaverage();
 console.log('Day ho ten hoc sinh :',student.fullname); //hien thi phan tu trong object
 console.log('Day la diem mon hoc maths : ',student.scores.maths); // truy xuat phan tu long nhau trong object
 
@@ -36,7 +36,6 @@ console.log('Goi properties (là hàm tính toán):  ',calulate);
 
 console.log('=============== cách thứ 2 ===============');
 // cách thứ 2
-debugger
 var student2 = new Object(); // khởi tạo 1 object mới nhưng không có giá trị
 student2.fullname = 'ngo thi binh duong'; // tạo thuộc tính (propeties) cho object thứ 2
 student2.year = '1996';
