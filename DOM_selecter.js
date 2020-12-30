@@ -123,3 +123,24 @@ function removeclass(element, classname){
 
 addclass(body,'container__wraper');
 addclass(imge,'image_sunny');
+
+// Một số method nâng cao của array và string
+/*
+    hàm slice(start, end) => tách mảng ,tạo ra một mảng mới theo index của mảng
+
+    hàm splice(start, end) => xóa phần tử theo index , giá trị trả về là mảng chứa các phần tử đã xóa
+        => làm thay đổi mảng gốc, trả về mảng những phần tử đã xóa
+
+    hàm splice() còn có chức năng thêm phần tử vào mảng.
+*/
+var arrNumber = [1,2,3,4,5,6,7,8,9,10];
+var arrNumber_2 = [1,2,3,4,5,6,7,8,9,10];
+
+console.log(arrNumber.slice(0,3)); // hàm slice là hàm tách theo index của mảng. không bao gồm index cuối cùng
+console.log(arrNumber);
+
+console.log(arrNumber_2.splice(0,4));  //hàm splice(start, end) => xóa phần tử theo index , không bao gồm index cuối cùng
+console.log(arrNumber_2); // => kết quả trả về [5,6,7,8,9,10]
+
+console.log(arrNumber_2.splice(0 ,4,1258)); //=> [5,6,7,8]
+console.log(arrNumber_2); // => [1258,9,10]
