@@ -97,6 +97,7 @@ function changeBackgroud(filename){
 var imge = document.querySelector(".image_tana");
     // imge.setAttribute('src','../HTML/hinhanh/SunnyThousand.jpg');
 
+// Thêm class    
 function addclass(element , classname){
     // console.log(element, classname);
     var oldclass = element.getAttribute('class');
@@ -117,12 +118,24 @@ function addclass(element , classname){
 
 }
 
+// xóa class 
 function removeclass(element, classname){
-
+    var old = element.getAttribute('class');
+    if (old) {
+        var arrayold = old.split(' ');
+        var tempindex = arrayold.indexOf(classname);
+        if (tempindex !== -1) {
+            arrayold.splice(tempindex,1);
+            element.setAttribute('class',arrayold.join(" "));
+        }
+    } 
+    
 }
 
 addclass(body,'container__wraper');
-addclass(imge,'image_sunny');
+addclass(imge,'image_sunny'); // gọi tới hàm thêm addclass => thêm class mới 
+
+removeclass(imge,'image_sunny') // gọi tới hàm remove class
 
 // Một số method nâng cao của array và string
 /*
@@ -133,6 +146,7 @@ addclass(imge,'image_sunny');
 
     hàm splice() còn có chức năng thêm phần tử vào mảng.
 */
+/*
 var arrNumber = [1,2,3,4,5,6,7,8,9,10];
 var arrNumber_2 = [1,2,3,4,5,6,7,8,9,10];
 
@@ -143,4 +157,4 @@ console.log(arrNumber_2.splice(0,4));  //hàm splice(start, end) => xóa phần 
 console.log(arrNumber_2); // => kết quả trả về [5,6,7,8,9,10]
 
 console.log(arrNumber_2.splice(0 ,4,1258)); //=> [5,6,7,8]
-console.log(arrNumber_2); // => [1258,9,10]
+console.log(arrNumber_2); // => [1258,9,10] */
