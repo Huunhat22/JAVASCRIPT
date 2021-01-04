@@ -4,39 +4,65 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Begin Javascript</title>
+    <link rel="stylesheet" href="../HTML/css/reset.css">
     <link rel="stylesheet" href="style.css">
     <link id="color-skin" rel="stylesheet" href="style.css">
 </head>
 <body>
     <div class="container">
-        <div class="item">
-            <h1>Learning Javascript</h1>
-            <div id="demo">Demo by ID </div>
-            <div class="demo" data-title="title 1">Demo class</div>
-            <div class="demo" data-title="title 2">Demo class</div>
-            <div class="demo">Demo class</div>
-            <div class="demo">Demo class</div>
-            <img class="image_tana" src="../HTML/hinhanh/tana.jpg" alt="">
-            <!-- <img class="image_sunny" src="" alt="đây là hình ảnh thứ 2"> -->
-        </div>
-        <div class="item">
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo itaque odit culpa eum, aliquid eos iste harum, quia consequatur voluptate est aliquam sed praesentium esse nemo iusto nesciunt doloribus soluta.</p>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo itaque odit culpa eum, aliquid eos iste harum, quia consequatur voluptate est aliquam sed praesentium esse nemo iusto nesciunt doloribus soluta.</p>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo itaque odit culpa eum, aliquid eos iste harum, quia consequatur voluptate est aliquam sed praesentium esse nemo iusto nesciunt doloribus soluta.</p>
-            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo itaque odit culpa eum, aliquid eos iste harum, quia consequatur voluptate est aliquam sed praesentium esse nemo iusto nesciunt doloribus soluta.</p>
-            <button class="btn" onclick="changeStylecolor('style.css')">Reset Color</button>
-            <button class="btn" onclick="changeStylecolor('Style-1.css')">Change color</button>
-            <button class="btn" onclick="changeContainer('while')">Reset format container</button>
-            <button class="btn" onclick="changeContainer('box')">Change format container</button>
-            <button class="btn" onclick="changeBackgroud('../HTML/hinhanh/bg.jpg')">Background 1</button>
-            <button class="btn" onclick="changeBackgroud('../HTML/hinhanh/eiffel.jpg')">Background 2</button>
-            <button class="btn" onclick="changeBackgroud()">Reset Background</button>
-        </div>
+        <section class="DOM__1">
+            <div class="item">
+                <h1>Learning Javascript</h1>
+                <div id="demo">Demo by ID </div>
+                <div class="demo" data-title="title 1">Demo class</div>
+                <div class="demo" data-title="title 2">Demo class</div>
+                <div class="demo">Demo class</div>
+                <div class="demo">Demo class</div>
+                <img class="image_tana" src="../HTML/hinhanh/tana.jpg" alt="">
+                <!-- <img class="image_sunny" src="" alt="đây là hình ảnh thứ 2"> -->
+            </div>
+            <div class="item">
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo itaque odit culpa eum, aliquid eos iste harum, quia consequatur voluptate est aliquam sed praesentium esse nemo iusto nesciunt doloribus soluta.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo itaque odit culpa eum, aliquid eos iste harum, quia consequatur voluptate est aliquam sed praesentium esse nemo iusto nesciunt doloribus soluta.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo itaque odit culpa eum, aliquid eos iste harum, quia consequatur voluptate est aliquam sed praesentium esse nemo iusto nesciunt doloribus soluta.</p>
+                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Illo itaque odit culpa eum, aliquid eos iste harum, quia consequatur voluptate est aliquam sed praesentium esse nemo iusto nesciunt doloribus soluta.</p>
+                <button class="btn" onclick="changeStylecolor('style.css')">Reset Color</button>
+                <button class="btn" onclick="changeStylecolor('Style-1.css')">Change color</button>
+                <button class="btn" onclick="changeContainer('')">Reset format container</button>
+                <button class="btn" onclick="changeContainer('box')">Change format container</button>
+                <button class="btn" onclick="changeBackgroud('../HTML/hinhanh/bg.jpg')">Background 1</button>
+                <button class="btn" onclick="changeBackgroud('../HTML/hinhanh/eiffel.jpg')">Background 2</button>
+                <button class="btn" onclick="changeBackgroud()">Reset Background</button>
+            </div>
+        </section>
+        <section class="DOM__2">
+            <div class="dropdown">
+                <button class="btn btn_dropdown">Dropdown List</button>
+                <ul class="dropdown__menu">
+                    <li><a href="#">dropdown 1</a></li>
+                    <li><a href="#">dropdown 2</a></li>
+                    <li><a href="#">dropdown 3</a></li>
+                    <li><a href="#">dropdown 4</a></li>
+                </ul>
+            </div>
+            <div class="dropdown">
+                <button class="btn btn_dropdown">Dropdown List</button>
+                <ul class="dropdown__menu">
+                    <li><a href="#">dropdown 1</a></li>
+                    <li><a href="#">dropdown 2</a></li>
+                    <li><a href="#">dropdown 3</a></li>
+                    <li><a href="#">dropdown 4</a></li>
+                </ul>
+            </div>
+            
+        </section>
+        
     </div>
     
 </body>
 <!-- <script src="begin.js"></script> -->
 <!-- <script src="Baitap.js"></script> -->
 <!-- <script src="For.js"></script> -->
-<script src="DOM_selecter.js"></script>
+<!-- <script src="DOM_selecter.js"></script> -->
+<script src="DOM_part2.js"></script>
 </html>
