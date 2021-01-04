@@ -43,7 +43,7 @@ for(var index =0; index < eldatatitle.length; index++){
 console.log("temp : ",temp); // Bi du 1 khoang trang cuoi cung phia sau chuoi
 
 // set gia tri data-title mới cho #demo và cắt khoảng trắng đầu và cuối
-document.getElementById("demo").setAttribute("class",temp.trim());
+//document.getElementById("demo").setAttribute("class",temp.trim()); //dùng để thêm class vào id của element
 console.log(eldatatitle);
 
 //Thực hành thay thế thuộc tính màu sắc với thẻ P với javascript
