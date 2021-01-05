@@ -6,7 +6,7 @@ dropdownlist.forEach(
         var btn = elemnt.querySelector('.btn');
         // console.log(btn);
         // sử dụng hàm thêm xử lý sự kiện
-        btn.addEventListener('click',function(event) {
+        btn.addEventListener('click',function() {
             // console.log(this);
             if (elemnt.classList.value.indexOf(' drop') === -1) {
                 elemnt.classList.add('drop');
