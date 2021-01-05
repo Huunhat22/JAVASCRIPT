@@ -75,7 +75,7 @@ li{
     position: relative;
     margin-bottom: 50px;
 }
-.dropdown .dropdown__menu.drop{
+.dropdown.drop .dropdown__menu{
     display: block
 }
 .dropdown .dropdown__menu{
