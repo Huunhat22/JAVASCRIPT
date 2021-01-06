@@ -21,3 +21,12 @@ dropdownlist.forEach(
 
         });
 })
+
+
+/* var dropdown = document.querySelector('.dropdown'); 
+    dropdown.addEventListener('click',
+        function (e) {
+            dropdown.classList.toggle('drop');
+        }
+    )
+  */  
