@@ -29,9 +29,20 @@ a{
 .container{
     max-width: 1024px;
     margin: 0 auto;
+    &__bd{
+        max-width: 960px;
+        margin: 0 auto;
+    }
+}
+
+@mixin flex ($align:flex-start,$justify:flex-start,$wrap:nowrap){
+    display: flex;
+    align-items: $align;
+    justify-content: $justify;
+    flex-wrap: $wrap;
 }
 .logo{
-    font-size: 1.8rem;
+    font-size: 1.7rem;
     font-weight: $font-medium;
     color: $text-color;
     &:hover{
@@ -58,7 +69,7 @@ a{
             align-items: center;
         }
         &-link{
-            font-size: 1.8rem;
+            font-size: 1.7rem;
             font-weight: $font-medium;
             color: $text-color;
             margin-left: 3.5rem;
@@ -69,5 +80,39 @@ a{
         &-activelink{
             color: $first-color;
         }
+    }
+}
+
+.home{
+    &__item{
+        @include flex(center,space-between ,nowrap );
+        height: calc(100vh - 3rem);
+    }
+    &__items{
+        width: calc(50% - 1.5rem);
+    }
+    &__image{
+        &-pic{
+            width: 100%;
+            object-fit: cover;
+        }
+    }
+    &__title{
+        color: $first-color;
+        font-size: 6.5rem;
+        margin-bottom: 2rem;
+    }
+    &__subtitle{
+        color: $title-color;
+        font-size: 4rem;
+        margin-bottom: 4rem;
+    }
+    &__link{
+        padding: 1.5rem 1.6rem;
+        color: #FFFFFF;
+        background: $first-color;
+        font-size: 1.7rem;
+        border-radius: 1rem;
+
     }
 }
