@@ -37,6 +37,43 @@ a {
   color: #069C54;
 }
 
+.section {
+  padding: 10rem 0 3rem;
+}
+
+.section__subtitle {
+  display: block;
+  color: #069C54;
+  font-weight: bold;
+  font-size: 1.6rem;
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+}
+
+.section__title {
+  color: #393939;
+  font-weight: bold;
+  font-size: 4rem;
+  margin-bottom: 3rem;
+}
+
+.section__description {
+  color: #707070;
+  font-size: 1.7rem;
+  margin-bottom: 2.5rem;
+}
+
+.section__link {
+  display: inline-block;
+  background-color: #069C54;
+  color: #fff;
+  font-size: 1.5rem;
+  font-weight: 500;
+  padding: 1.2rem 1.6rem;
+  border-radius: .7rem;
+  letter-spacing: 1px;
+}
+
 .header {
   position: fixed;
   top: 0;
@@ -134,5 +171,72 @@ a {
 
 .home__link:hover {
   background-color: #048654;
+}
+
+.about__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.about__image, .about__info {
+  width: calc(50% - 6rem);
+}
+
+.about__image {
+  width: 380px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 1rem;
+}
+
+.services__subtitle, .services__titles {
+  text-align: center;
+  display: block;
+}
+
+.services__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.services__item {
+  width: calc(33% - 2rem);
+  text-align: center;
+}
+
+.services__image {
+  height: 64px;
+  width: 64px;
+  fill: #069C54;
+  margin-bottom: 2rem;
+}
+
+.services__title {
+  color: #393939;
+  font-size: 2rem;
+  font-weight: 550;
+  margin-bottom: 1.5rem;
+}
+
+.services__description {
+  padding: 0 2rem;
 }
 /*# sourceMappingURL=restaurant_style.css.map */

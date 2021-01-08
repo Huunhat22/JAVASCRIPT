@@ -49,7 +49,39 @@ a{
         color: $first-color;
     }
 }
-
+.section{
+    padding: 10rem 0 3rem;
+    &__subtitle{
+        display: block;
+        color: $first-color;
+        font-weight: bold;
+        font-size: 1.6rem;
+        margin-bottom: 1rem;
+        letter-spacing: 1px;
+    }
+    &__title{
+        color: $title-color;
+        font-weight: bold;
+        font-size: 4rem;
+        margin-bottom: 3rem;
+        // text-align: center;
+    }
+    &__description{
+        color: $text-color;
+        font-size: 1.7rem;
+        margin-bottom: 2.5rem;
+    }
+    &__link{
+        display: inline-block;
+        background-color: $first-color;
+        color: #fff;
+        font-size: 1.5rem;
+        font-weight: 500;
+        padding: 1.2rem 1.6rem;
+        border-radius: .7rem;
+        letter-spacing: 1px;
+    }
+}
 .header{
     position: fixed;
     top: 0;
@@ -117,4 +149,49 @@ a{
             
         }
     }
+}
+
+.about{
+    &__item{
+        @include flex(center,space-between ,nowrap )
+    }
+    &__image,&__info{
+        width: calc(50% - 6rem);
+    }
+    &__image{
+        width: 380px;
+        object-fit: cover;
+        border-radius: 1rem;
+    }
+}
+
+.services{
+
+    &__subtitle,&__titles{
+        text-align: center;
+        display: block;
+    }
+    &__list{
+        @include flex(center,space-between ,wrap)
+    }
+    &__item{
+        width: calc(33% - 2rem);
+        text-align: center;
+    }
+    &__image{
+        height: 64px;
+        width: 64px;
+        fill: $first-color;
+        margin-bottom: 2rem;
+    }
+    &__title{
+        color: $title-color;
+        font-size: 2rem;
+        font-weight: 550;
+        margin-bottom: 1.5rem;
+    }
+    &__description{
+        padding: 0 2rem;
+    }
+
 }
