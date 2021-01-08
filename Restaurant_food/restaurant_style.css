@@ -100,12 +100,11 @@ a {
   height: calc(100vh - 3rem);
 }
 
-.home__items {
-  width: calc(50% - 1.5rem);
+.home__info, .home__image {
+  width: calc(50% - 2rem);
 }
 
-.home__image-pic {
-  width: 100%;
+.home__image {
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -123,10 +122,17 @@ a {
 }
 
 .home__link {
-  padding: 1.5rem 1.6rem;
+  padding: 1.2rem 1.6rem;
   color: #FFFFFF;
   background: #069C54;
   font-size: 1.7rem;
   border-radius: 1rem;
+  display: inline-block;
+  -webkit-transition: background-color .4s;
+  transition: background-color .4s;
+}
+
+.home__link:hover {
+  background-color: #048654;
 }
 /*# sourceMappingURL=restaurant_style.css.map */
