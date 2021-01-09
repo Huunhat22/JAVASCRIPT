@@ -26,6 +26,13 @@ body{
 a{
     text-decoration: none;
 }
+
+img{
+    max-width: 100%;
+    height: auto;
+    display: block;
+}
+
 .container{
     max-width: 1024px;
     margin: 0 auto;
@@ -33,6 +40,10 @@ a{
         max-width: 960px;
         margin: 0 auto;
     }
+}
+
+.bx{
+    font-size: 1.6rem;
 }
 
 @mixin flex ($align:flex-start,$justify:flex-start,$wrap:nowrap){
@@ -88,11 +99,13 @@ a{
     left: 0;
     width: 100%;
     background-color: $body-color;
+    z-index: 999;
     &__inner{
         display: flex;
         justify-content: space-between;
         align-items: center;
         height: 7rem;
+        
     }
     &__menu{
         &-list{
@@ -194,4 +207,89 @@ a{
         padding: 0 2rem;
     }
 
+}
+
+.menu{
+    &__subtitle,&__titles{
+        text-align: center;
+        display: block;
+    }
+    &__list{
+        @include flex(center,space-between ,wrap );
+        max-width:760px;
+        margin: 0 auto;
+    }
+    &__item{
+        position: relative;
+        width: calc(33% - 5rem);
+        padding: 2.4rem;
+        background-color: #fff;
+        border-radius: .6rem;
+        box-shadow: 0 2px 4px rgba(3,74,40,.15);
+        z-index: 1;
+        // text-align: center;
+    }
+    &__image{
+        width: 130px;
+        object-fit: cover;
+        align-self: center;
+        margin: 0 auto 1.5rem;
+    }
+    &__foodname{
+        font-size: 1.6rem;
+        font-weight: 600;
+        letter-spacing: 1px;
+        color: $title-color;
+        margin-bottom: 1rem;
+    }
+    &__description,&__price{
+        display: block;
+    }
+    &__description{
+        margin-bottom: 1.3rem;
+        color: $text-color-light;
+        font-size: 1.5rem;
+        font-weight: 500;
+    }
+    &__price{
+        color: $text-color;
+        font-weight: bold;
+        font-size: 1.5rem;
+    }
+    &__card{
+        position: absolute;
+        display: flex;
+        right: 0;
+        bottom: 0;
+        background-color: $first-color;
+        color: #fff;
+        padding: 1rem 1.3rem;
+        border-radius: .5rem 0 .5rem 0;
+        transition: background-color .4s;
+        &:hover{
+            background-color: $first-color-alt;
+        }
+    }
+}
+
+.feature{
+    &__item{
+        @include flex(center,space-between ,nowrap );
+        margin: 0 auto;
+    }
+    &__image,&__info{
+        width: calc(50% - 6rem);
+    }
+    &__image{
+        width: 380px;
+    }
+    &__app{
+        @include flex(center,flex-start ,nowrap);
+    }
+    &__app{
+        &-iso,&-android{
+            width: 120px;
+            margin-right: 2rem;
+        }
+    }
 }

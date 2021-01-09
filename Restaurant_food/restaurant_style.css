@@ -17,6 +17,12 @@ a {
   text-decoration: none;
 }
 
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 .container {
   max-width: 1024px;
   margin: 0 auto;
@@ -25,6 +31,10 @@ a {
 .container__bd {
   max-width: 960px;
   margin: 0 auto;
+}
+
+.bx {
+  font-size: 1.6rem;
 }
 
 .logo {
@@ -80,6 +90,7 @@ a {
   left: 0;
   width: 100%;
   background-color: #FBFEFD;
+  z-index: 999;
 }
 
 .header__inner {
@@ -238,5 +249,133 @@ a {
 
 .services__description {
   padding: 0 2rem;
+}
+
+.menu__subtitle, .menu__titles {
+  text-align: center;
+  display: block;
+}
+
+.menu__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  max-width: 760px;
+  margin: 0 auto;
+}
+
+.menu__item {
+  position: relative;
+  width: calc(33% - 5rem);
+  padding: 2.4rem;
+  background-color: #fff;
+  border-radius: .6rem;
+  -webkit-box-shadow: 0 2px 4px rgba(3, 74, 40, 0.15);
+          box-shadow: 0 2px 4px rgba(3, 74, 40, 0.15);
+  z-index: 1;
+}
+
+.menu__image {
+  width: 130px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: 0 auto 1.5rem;
+}
+
+.menu__foodname {
+  font-size: 1.6rem;
+  font-weight: 600;
+  letter-spacing: 1px;
+  color: #393939;
+  margin-bottom: 1rem;
+}
+
+.menu__description, .menu__price {
+  display: block;
+}
+
+.menu__description {
+  margin-bottom: 1.3rem;
+  color: #A6A6A6;
+  font-size: 1.5rem;
+  font-weight: 500;
+}
+
+.menu__price {
+  color: #707070;
+  font-weight: bold;
+  font-size: 1.5rem;
+}
+
+.menu__card {
+  position: absolute;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  right: 0;
+  bottom: 0;
+  background-color: #069C54;
+  color: #fff;
+  padding: 1rem 1.3rem;
+  border-radius: .5rem 0 .5rem 0;
+  -webkit-transition: background-color .4s;
+  transition: background-color .4s;
+}
+
+.menu__card:hover {
+  background-color: #048654;
+}
+
+.feature__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  margin: 0 auto;
+}
+
+.feature__image, .feature__info {
+  width: calc(50% - 6rem);
+}
+
+.feature__image {
+  width: 380px;
+}
+
+.feature__app {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+}
+
+.feature__app-iso, .feature__app-android {
+  width: 120px;
+  margin-right: 2rem;
 }
 /*# sourceMappingURL=restaurant_style.css.map */
