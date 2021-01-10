@@ -52,7 +52,6 @@ img {
 }
 
 .section__subtitle {
-  display: block;
   color: #069C54;
   font-weight: bold;
   font-size: 1.6rem;
@@ -145,6 +144,10 @@ img {
           justify-content: space-between;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   height: calc(100vh - 3rem);
 }
 
@@ -196,6 +199,10 @@ img {
           justify-content: space-between;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .about__image, .about__info {
@@ -226,6 +233,10 @@ img {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .services__item {
@@ -268,6 +279,10 @@ img {
           justify-content: space-between;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   max-width: 760px;
   margin: 0 auto;
 }
@@ -349,6 +364,10 @@ img {
           justify-content: space-between;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
   margin: 0 auto;
 }
 
@@ -372,10 +391,136 @@ img {
           justify-content: flex-start;
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
 }
 
 .feature__app-iso, .feature__app-android {
   width: 120px;
   margin-right: 2rem;
+}
+
+.contact__item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.contact__button {
+  width: 30%;
+  display: block;
+  text-align: center;
+}
+
+.contact__info {
+  max-width: 70%;
+}
+
+.contact__link {
+  display: inline-block;
+  color: #FFFFFF;
+  background-color: #069C54;
+  font-size: 1.6rem;
+  font-weight: bold;
+  padding: 1.7rem 1.4rem;
+  cursor: pointer;
+  border-radius: 6px;
+  -webkit-transition: background-color .4s;
+  transition: background-color .4s;
+}
+
+.contact__link:hover {
+  background-color: #048654;
+}
+
+.footer__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+.footer__item {
+  width: calc(25% - 24px);
+}
+
+.footer__logo {
+  display: block;
+  color: #069C54;
+  font-size: 2rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+}
+
+.footer__description {
+  color: #707070;
+  font-size: 1.6rem;
+  display: block;
+  letter-spacing: 1px;
+  margin-bottom: 4rem;
+}
+
+.footer__linkicon {
+  font-size: 2.4rem;
+  margin-right: 2.4rem;
+  color: #393939;
+}
+
+.footer__title {
+  font-size: 2.2rem;
+  color: #393939;
+  font-weight: 600;
+  margin-bottom: 2.5rem;
+}
+
+.footer__link {
+  display: block;
+  color: #707070;
+  font-size: 1.7rem;
+  margin-bottom: .8rem;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  letter-spacing: 1px;
+  -webkit-transition: color .4s;
+  transition: color .4s;
+}
+
+.footer__link:hover {
+  color: #069C54;
+}
+
+.footer__copy {
+  text-align: center;
+  font-size: 1.4rem;
+  font-size: 500;
+  color: #A6A6A6;
+  margin: 3.5rem 0;
+  letter-spacing: 1px;
 }
 /*# sourceMappingURL=restaurant_style.css.map */

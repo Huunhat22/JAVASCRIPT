@@ -46,11 +46,12 @@ img{
     font-size: 1.6rem;
 }
 
-@mixin flex ($align:flex-start,$justify:flex-start,$wrap:nowrap){
+@mixin flex ($align:flex-start,$justify:flex-start,$wrap:nowrap, $dir:row){
     display: flex;
     align-items: $align;
     justify-content: $justify;
     flex-wrap: $wrap;
+    flex-direction: $dir;
 }
 .logo{
     font-size: 1.7rem;
@@ -63,7 +64,7 @@ img{
 .section{
     padding: 10rem 0 3rem;
     &__subtitle{
-        display: block;
+        // display: block;
         color: $first-color;
         font-weight: bold;
         font-size: 1.6rem;
@@ -291,5 +292,92 @@ img{
             width: 120px;
             margin-right: 2rem;
         }
+    }
+}
+
+.contact{
+    &__item{
+        @include flex(center,space-between,nowrap,row);
+        // margin:0 auto;
+    }
+    // &__info,&__button{
+    //     // width: calc(50% - 25px);
+    //     // max-width: 50%;
+    // }
+    &__button{
+        width: 30%;
+        display: block;
+        text-align: center;
+    }
+    &__info{
+         max-width: 70%;
+    }
+    &__link{
+        display: inline-block;
+        color: #FFFFFF;
+        background-color: $first-color;
+        font-size: 1.6rem;
+        font-weight: bold;
+        padding: 1.7rem 1.4rem;
+        cursor: pointer;
+        border-radius: 6px;
+        transition: background-color .4s;
+        &:hover{
+            background-color: $first-color-alt;
+        }
+    }
+}
+
+.footer{
+    &__list{
+        @include flex(flex-start ,space-between)
+    }
+    &__item{
+        width: calc(25% - 24px);
+    }
+    &__logo{
+        display: block;
+        color: $first-color;
+        font-size: 2rem;
+        font-weight: 600;
+        margin-bottom: 1rem;
+    }
+    &__description{
+        color: $text-color;
+        font-size: 1.6rem;
+        display: block;
+        letter-spacing: 1px;
+        margin-bottom: 4rem;
+    }
+    &__linkicon{
+        font-size: 2.4rem;
+        margin-right: 2.4rem;
+        color: $title-color;
+    }
+    &__title{
+        font-size: 2.2rem;
+        color: $title-color;
+        font-weight: 600;
+        margin-bottom: 2.5rem;
+    }
+    &__link{
+        display: block;
+        color: $text-color;
+        font-size: 1.7rem;
+        margin-bottom: .8rem;
+        width: fit-content;
+        letter-spacing: 1px;
+        transition: color .4s;
+        &:hover{
+            color: $first-color;
+        }
+    }
+    &__copy{
+        text-align: center;
+        font-size: 1.4rem;
+        font-size: 500;
+        color: $text-color-light;
+        margin: 3.5rem 0;
+        letter-spacing: 1px;
     }
 }
