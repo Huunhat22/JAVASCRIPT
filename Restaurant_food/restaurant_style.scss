@@ -381,3 +381,21 @@ img{
         letter-spacing: 1px;
     }
 }
+
+/*========== RESPONSIVE MEDIA QUERIES ==========*/
+@media screen and (max-width:1023px){
+    .container{
+        width: 960px;
+        margin: 0 auto;
+        padding: 0 2rem;
+        &__bd{
+            max-width: 860px;
+            margin: 0 auto;
+        }
+    }
+    .header{
+        &__inner{
+            height: calc(4.8rem + 5rem);
+        }
+    }
+}
