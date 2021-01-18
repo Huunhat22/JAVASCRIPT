@@ -529,7 +529,7 @@ img {
   letter-spacing: 1px;
 }
 
-/*========== RESPONSIVE MEDIA QUERIES ==========*/
+/*========== RESPONSIVE MEDIA QUERIES for Ipad ==========*/
 @media screen and (max-width: 1023px) {
   .section {
     padding: 10rem 0 3rem;
@@ -547,7 +547,7 @@ img {
     font-size: 2rem;
   }
   .container {
-    width: 960px;
+    max-width: 960px;
     margin: 0 auto;
     padding: 0 2rem;
   }
@@ -555,17 +555,17 @@ img {
     max-width: 860px;
     margin: 0 auto;
   }
-  .header__inner {
-    height: calc(4.8rem + 5rem);
+  .logo {
+    font-size: 4rem;
   }
-}
-
-@media screen and (max-width: 767px) {
   .header__toggle {
     display: block;
   }
   .header__toggle > i {
-    font-size: 2.2rem;
+    font-size: 5rem;
+  }
+  .header__inner {
+    height: calc(4.8rem + 5rem);
   }
   .header__menu {
     position: fixed;
@@ -602,7 +602,6 @@ img {
     position: absolute;
     top: 0;
     right: 2rem;
-    cursor: pointer;
   }
 }
 /*# sourceMappingURL=restaurant_style.css.map */
