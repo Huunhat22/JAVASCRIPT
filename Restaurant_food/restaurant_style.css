@@ -25,6 +25,7 @@ img {
 
 .container {
   max-width: 1024px;
+  width: calc(100% - 2rem);
   margin: 0 auto;
 }
 
@@ -130,6 +131,10 @@ img {
 
 .header__menu-activelink {
   color: #069C54;
+}
+
+.header__toggle {
+  display: none;
 }
 
 .home__item {
@@ -526,6 +531,21 @@ img {
 
 /*========== RESPONSIVE MEDIA QUERIES ==========*/
 @media screen and (max-width: 1023px) {
+  .section {
+    padding: 10rem 0 3rem;
+  }
+  .section__subtitle {
+    font-size: 1.8rem;
+  }
+  .section__title {
+    color: #393939;
+    font-weight: bold;
+    font-size: 4rem;
+    margin-bottom: 3rem;
+  }
+  .section__description {
+    font-size: 2rem;
+  }
   .container {
     width: 960px;
     margin: 0 auto;
@@ -537,6 +557,52 @@ img {
   }
   .header__inner {
     height: calc(4.8rem + 5rem);
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header__toggle {
+    display: block;
+  }
+  .header__toggle > i {
+    font-size: 2.2rem;
+  }
+  .header__menu {
+    position: fixed;
+    left: 0;
+    top: -100%;
+    width: 100%;
+    padding: 2.4rem 0 1.6rem;
+    background-color: #FBFEFD;
+    -webkit-transition: .4s;
+    transition: .4s;
+    -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+            box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    border-radius: 0 0 1rem 1rem;
+    z-index: 999;
+  }
+  .header__menu-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+    position: relative;
+  }
+  .header__menu-item {
+    margin-bottom: 2rem;
+  }
+  .header__menu-link {
+    margin-left: 0;
+  }
+  .header__menu-show {
+    top: 6.6rem;
+  }
+  .change__theme {
+    position: absolute;
+    top: 0;
+    right: 2rem;
+    cursor: pointer;
   }
 }
 /*# sourceMappingURL=restaurant_style.css.map */
