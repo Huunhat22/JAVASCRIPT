@@ -136,7 +136,7 @@ img{
 
 .home{
     &__item{
-        @include flex(center,space-between ,nowrap );
+        @include flex(center,space-between,wrap);
         height: calc(100vh - 3rem);
     }
     &__info,&__image{
@@ -172,7 +172,7 @@ img{
 
 .about{
     &__item{
-        @include flex(center,space-between ,nowrap )
+        @include flex(center,space-between ,wrap)
     }
     &__image,&__info{
         width: calc(50% - 6rem);
@@ -221,7 +221,7 @@ img{
         display: block;
     }
     &__list{
-        @include flex(center,space-between ,wrap );
+        @include flex(center,space-between ,wrap);
         max-width:760px;
         margin: 0 auto;
     }
@@ -280,7 +280,7 @@ img{
 
 .feature{
     &__item{
-        @include flex(center,space-between ,nowrap );
+        @include flex(center,space-between ,wrap);
         margin: 0 auto;
     }
     &__image,&__info{
@@ -290,7 +290,7 @@ img{
         width: 380px;
     }
     &__app{
-        @include flex(center,flex-start ,nowrap);
+        @include flex(center,flex-start ,wrap);
     }
     &__app{
         &-iso,&-android{
@@ -302,7 +302,7 @@ img{
 
 .contact{
     &__item{
-        @include flex(center,space-between,nowrap,row);
+        @include flex(center,space-between,wrap);
         // margin:0 auto;
     }
     // &__info,&__button{
@@ -417,13 +417,13 @@ img{
     //     }
     // }
     .logo{
-        font-size: 4rem;
+        font-size: 3rem;
     }
     .header{
         &__toggle{
             display: block;
             > i{
-              font-size: 5rem;  
+              font-size: 3.5rem;  
             }
         }
         &__inner{
@@ -467,6 +467,13 @@ img{
 
 }
 @media screen and (max-width:767px){
+    //     // khi thay đổi giao diện về nhỏ hơn hoặc bằng 767 thì sẽ thêm class này vào
+    //     .change__theme{
+    //         position: absolute;
+    //         top: 0;
+    //         right: 2rem;
+    //     }
+
     .header{
         &__menu{
             &-item{
@@ -479,13 +486,11 @@ img{
                 top: 6.6rem;
             }
         }
-        
-    // }
-    //     // khi thay đổi giao diện về nhỏ hơn hoặc bằng 767 thì sẽ thêm class này vào
-    //     .change__theme{
-    //         position: absolute;
-    //         top: 0;
-    //         right: 2rem;
-    //     }
-
+    }  
+    .home{
+        &__item{
+            flex-wrap: wrap;
+            flex-direction: column;
+        }
+    }
 }
