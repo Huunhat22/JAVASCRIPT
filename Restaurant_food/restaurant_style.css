@@ -24,7 +24,7 @@ img {
 }
 
 .container {
-  max-width: 1024px;
+  max-width: 1124px;
   width: calc(100% - 2rem);
   margin: 0 auto;
 }
@@ -546,26 +546,11 @@ img {
   .section__description {
     font-size: 2rem;
   }
-  .container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 0 2rem;
-  }
-  .container__bd {
-    max-width: 860px;
-    margin: 0 auto;
-  }
-  .logo {
-    font-size: 4rem;
-  }
   .header__toggle {
     display: block;
   }
   .header__toggle > i {
-    font-size: 5rem;
-  }
-  .header__inner {
-    height: calc(4.8rem + 5rem);
+    font-size: 4rem;
   }
   .header__menu {
     position: fixed;
@@ -598,10 +583,38 @@ img {
   .header__menu-show {
     top: 6.6rem;
   }
+  .footer__list {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
   .change__theme {
     position: absolute;
     top: 0;
     right: 2rem;
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .logo {
+    font-size: 2rem;
+  }
+  .header__toggle {
+    display: block;
+  }
+  .header__toggle > i {
+    font-size: 3rem;
+  }
+  .header__menu-item {
+    margin-bottom: 4rem;
+  }
+  .header__menu-link {
+    font-size: 3.6rem;
+  }
+  .header__menu-show {
+    top: 6.6rem;
+  }
+  .footer, .feature, .menu {
+    display: none;
   }
 }
 /*# sourceMappingURL=restaurant_style.css.map */
