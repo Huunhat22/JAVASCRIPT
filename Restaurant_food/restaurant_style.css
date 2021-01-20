@@ -147,8 +147,8 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -202,8 +202,8 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -367,8 +367,8 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -394,8 +394,8 @@ img {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -417,8 +417,8 @@ img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -546,11 +546,24 @@ img {
   .section__description {
     font-size: 2rem;
   }
+<<<<<<< HEAD
+=======
+  .logo {
+    font-size: 3rem;
+  }
+>>>>>>> e26fb39cae9bd055c1dcedadb219dbe10c9a18d3
   .header__toggle {
     display: block;
   }
   .header__toggle > i {
+<<<<<<< HEAD
     font-size: 4rem;
+=======
+    font-size: 3.5rem;
+  }
+  .header__inner {
+    height: calc(4.8rem + 5rem);
+>>>>>>> e26fb39cae9bd055c1dcedadb219dbe10c9a18d3
   }
   .header__menu {
     position: fixed;
@@ -595,6 +608,7 @@ img {
 }
 
 @media screen and (max-width: 767px) {
+<<<<<<< HEAD
   .logo {
     font-size: 2rem;
   }
@@ -604,6 +618,8 @@ img {
   .header__toggle > i {
     font-size: 3rem;
   }
+=======
+>>>>>>> e26fb39cae9bd055c1dcedadb219dbe10c9a18d3
   .header__menu-item {
     margin-bottom: 4rem;
   }
@@ -613,8 +629,18 @@ img {
   .header__menu-show {
     top: 6.6rem;
   }
+<<<<<<< HEAD
   .footer, .feature, .menu {
     display: none;
+=======
+  .home__item {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+>>>>>>> e26fb39cae9bd055c1dcedadb219dbe10c9a18d3
   }
 }
 /*# sourceMappingURL=restaurant_style.css.map */

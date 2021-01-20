@@ -34,7 +34,7 @@ img{
 }
 
 .container{
-    max-width: 1124px;
+    max-width: 1024px;
     width: calc(100% - 2rem);
     margin: 0 auto;
     &__bd{
@@ -280,7 +280,7 @@ img{
 
 .feature{
     &__item{
-        @include flex(center,space-between ,nowrap);
+        @include flex(center,space-between ,nowrap );
         margin: 0 auto;
     }
     &__image,&__info{
@@ -416,12 +416,18 @@ img{
     //         margin: 0 auto;
     //     }
     // }
+    .logo{
+        font-size: 4rem;
+    }
     .header{
         &__toggle{
             display: block;
             > i{
-              font-size: 4rem;  
+              font-size: 5rem;  
             }
+        }
+        &__inner{
+            height: calc(4.8rem + 5rem);
         }
         &__menu{
             position: fixed;
@@ -452,11 +458,6 @@ img{
         }
         
     }
-    .footer{
-        &__list{
-            flex-wrap: wrap;
-        }
-    }
     // khi thay đổi giao diện về nhỏ hơn hoặc bằng 767 thì sẽ thêm class này vào
     .change__theme{
         position: absolute;
@@ -466,16 +467,7 @@ img{
 
 }
 @media screen and (max-width:767px){
-    .logo{
-        font-size: 2rem;
-    }
     .header{
-        &__toggle{
-            display: block;
-            > i{
-              font-size: 3rem;  
-            }
-        }
         &__menu{
             &-item{
                 margin-bottom: 4rem;
@@ -487,10 +479,8 @@ img{
                 top: 6.6rem;
             }
         }
-    }   
-    .footer , .feature , .menu{
-        display: none;
-    }    
+        
+    // }
     //     // khi thay đổi giao diện về nhỏ hơn hoặc bằng 767 thì sẽ thêm class này vào
     //     .change__theme{
     //         position: absolute;
