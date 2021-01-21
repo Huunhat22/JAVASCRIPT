@@ -34,13 +34,9 @@ img{
 }
 
 .container{
-    max-width: 1024px;
+    max-width: 1124px;
     width: calc(100% - 2rem);
     margin: 0 auto;
-    &__bd{
-        max-width: 960px;
-        margin: 0 auto;
-    }
 }
 
 .bx{
@@ -135,8 +131,10 @@ img{
 }
 
 .home{
+    max-width: 960px;
+    margin: 0 auto;
     &__item{
-        @include flex(center,space-between ,nowrap );
+        @include flex(center,space-between,wrap);
         height: calc(100vh - 3rem);
     }
     &__info,&__image{
@@ -180,7 +178,9 @@ img{
     &__image{
         width: 380px;
         object-fit: cover;
-        border-radius: 1rem;
+        > img{
+            border-radius: 1rem;
+        }
     }
 }
 
@@ -280,7 +280,7 @@ img{
 
 .feature{
     &__item{
-        @include flex(center,space-between ,nowrap );
+        @include flex(center,space-between ,wrap );
         margin: 0 auto;
     }
     &__image,&__info{
@@ -302,7 +302,7 @@ img{
 
 .contact{
     &__item{
-        @include flex(center,space-between,nowrap,row);
+        @include flex(center,space-between,wrap,row);
         // margin:0 auto;
     }
     // &__info,&__button{
@@ -315,7 +315,7 @@ img{
         text-align: center;
     }
     &__info{
-         max-width: 70%;
+        width: 70%;
     }
     &__link{
         display: inline-block;
@@ -335,7 +335,7 @@ img{
 
 .footer{
     &__list{
-        @include flex(flex-start ,space-between)
+        @include flex(flex-start ,space-between,wrap)
     }
     &__item{
         width: calc(25% - 24px);
@@ -406,28 +406,15 @@ img{
             font-size: 2rem;
         }
     }
-
-    // .container{
-    //     max-width: 960px;
-    //     margin: 0 auto;
-    //     padding: 0 2rem;
-    //     &__bd{
-    //         max-width: 860px;
-    //         margin: 0 auto;
-    //     }
-    // }
     .logo{
-        font-size: 4rem;
+        font-size: 2rem;
     }
     .header{
         &__toggle{
             display: block;
             > i{
-              font-size: 5rem;  
+              font-size: 3rem;  
             }
-        }
-        &__inner{
-            height: calc(4.8rem + 5rem);
         }
         &__menu{
             position: fixed;
@@ -458,6 +445,11 @@ img{
         }
         
     }
+    .footer{
+        &__item{
+            width: calc(33% - 30px);
+        }
+    }
     // khi thay đổi giao diện về nhỏ hơn hoặc bằng 767 thì sẽ thêm class này vào
     .change__theme{
         position: absolute;
@@ -467,6 +459,14 @@ img{
 
 }
 @media screen and (max-width:767px){
+    .section{
+        &__title{
+            font-size: 2.8rem;
+        }
+        &__description{
+            font-size: 1.8rem;
+        }
+    }
     .header{
         &__menu{
             &-item{
@@ -480,7 +480,89 @@ img{
             }
         }
         
-    // }
+    }
+    .home{
+        &__item{
+            margin-top: 10rem;
+            justify-content: center;
+        }
+        &__title{
+            font-size: 4rem;
+        }
+        &__subtitle{
+            font-size: 3rem;
+        }
+        &__info,&__image{
+            width: calc(100% - 50px);
+        }
+    }
+    .about{
+        &__item{
+            justify-content: center;
+            flex-wrap: wrap-reverse;
+            text-align: center;
+        }
+        &__image,&__info{
+            width: calc(100% - 50px);
+        }
+        &__image{
+            margin-top: 3rem;
+            align-self: center;
+            > img{
+                max-width: 280px;
+                margin: 0 auto;
+            }
+        }
+    }
+    .services{
+        &__item{
+            width: 100%;
+        }
+
+    }
+    .menu{
+        &__item{
+            width: calc(50% - 15px);
+            margin-bottom: 2rem;
+        }
+    }
+    .feature{
+        &__item{
+            flex-wrap: wrap-reverse;
+            justify-content: center;
+            text-align: center;
+        }
+        &__image,&__info{
+            width: 100%;
+        }
+        &__image{
+            margin-top: 2rem;
+            > img{
+                margin: 0 auto;
+                max-width: 230px;
+            }
+        }
+
+        &__app{
+            @include flex(center,space-evenly);
+            &-iso,&-android{
+                margin-right: 0;
+            }
+        }
+    }
+    .contact{
+        &__info,&__button{
+            width: 100%;
+            justify-content: center;
+            text-align: center;
+        }
+    }
+    .footer{
+        &__item{
+            width: 100%;
+            margin-bottom: 1rem;
+        }
+    }
     //     // khi thay đổi giao diện về nhỏ hơn hoặc bằng 767 thì sẽ thêm class này vào
     //     .change__theme{
     //         position: absolute;
