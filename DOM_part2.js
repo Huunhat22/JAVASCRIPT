@@ -1,4 +1,5 @@
 //Thực hành DOM part2 với dropdown list
+debugger
 var dropdownlist = Array.from(document.querySelectorAll('.dropdown'));
 
 dropdownlist.forEach(
