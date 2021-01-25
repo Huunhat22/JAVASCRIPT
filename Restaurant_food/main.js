@@ -22,3 +22,17 @@ const showMenu = (toggleId, navId) => {
 
 }
 showMenu('header-toggle', 'nav-menu');
+
+/* ======================== REMOVE MENU WHEN CLICK MENU LINK MOBILE ===========================*/
+// debugger
+const linklist = document.querySelectorAll('.header__menu-link');
+
+const removemenulist = () => {
+    const navmenu = document.getElementById('nav-menu');
+    navmenu.classList.remove('header__menu-show');
+    
+}
+linklist.forEach(element => {
+    element.addEventListener('click',removemenulist);
+});
+
