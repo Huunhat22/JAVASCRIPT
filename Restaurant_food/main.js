@@ -5,7 +5,7 @@ const showMenu = (toggleId, navId) => {
         navmenu = document.getElementById(navId)
     // kiểm tra khác null thì thực hiện
     if (navmenu && toggle) {
-        toggle.addEventListener('click' , ()=>{
+        toggle.addEventListener('click', () => {
             navmenu.classList.toggle('header__menu-show');
         })
     }
@@ -24,15 +24,33 @@ const showMenu = (toggleId, navId) => {
 showMenu('header-toggle', 'nav-menu');
 
 /* ======================== REMOVE MENU WHEN CLICK MENU LINK MOBILE ===========================*/
-// debugger
 const linklist = document.querySelectorAll('.header__menu-link');
 
 const removemenulist = () => {
     const navmenu = document.getElementById('nav-menu');
     navmenu.classList.remove('header__menu-show');
-    
+
 }
 linklist.forEach(element => {
-    element.addEventListener('click',removemenulist);
+    element.addEventListener('click', removemenulist);
 });
 
+/* ======================== ACTIVE COLOR LINK OF MENU ON HEADER WHEN SCROLL WINDOWS ===========================*/
+const sectionlist = document.querySelectorAll('section[id]');
+
+function activelink() {
+    const scrollY = window.pageYOffset;
+
+    sectionlist.forEach(element => {
+        const sectionHeight = element.offsetHeight;
+        const sectionTop = element.offsetTop - 50;
+        sectionId = element.getAttribute('id');
+
+        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
+            document.querySelector('.header__menu header__menu-list a[href*=' + sectionId + ']').classList.add('header__menu-activelink');
+        } else {
+            document.querySelector('.header__menu header__menu-list a[href*=' + sectionId + ']').classList.remove('header__menu-activelink');
+        }
+    })
+}
+window.addEventListener('scroll', activelink);
