@@ -59,6 +59,33 @@ img{
         color: $first-color;
     }
 }
+.scrolltop{
+    position: fixed;
+    right: 2rem;
+    bottom: 2rem;
+    padding: .5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $first-color;
+    border-radius: .5rem;
+    opacity: .6;
+    transition: opacity .4s;
+    visibility: hidden;
+    &__icon{
+        font-size: 2.8rem;
+        color: $body-color;
+    }
+    &:hover{
+        opacity: 1;
+    }
+}
+
+.show-scroll{
+    visibility: visible;
+    bottom: 1.5rem;
+}
+
 .section{
     padding: 10rem 0 3rem;
     &__subtitle{
@@ -127,6 +154,9 @@ img{
     }
     &__toggle{
         display: none
+    }
+    &__scroll{
+        box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);;
     }
 }
 

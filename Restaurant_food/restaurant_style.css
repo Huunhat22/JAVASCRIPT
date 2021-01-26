@@ -43,6 +43,42 @@ img {
   color: #069C54;
 }
 
+.scrolltop {
+  position: fixed;
+  right: 2rem;
+  bottom: 2rem;
+  padding: .5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  background-color: #069C54;
+  border-radius: .5rem;
+  opacity: .6;
+  -webkit-transition: opacity .4s;
+  transition: opacity .4s;
+  visibility: hidden;
+}
+
+.scrolltop__icon {
+  font-size: 2.8rem;
+  color: #FBFEFD;
+}
+
+.scrolltop:hover {
+  opacity: 1;
+}
+
+.show-scroll {
+  visibility: visible;
+  bottom: 1.5rem;
+}
+
 .section {
   padding: 10rem 0 3rem;
 }
@@ -130,6 +166,11 @@ img {
 
 .header__toggle {
   display: none;
+}
+
+.header__scroll {
+  -webkit-box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 .home {

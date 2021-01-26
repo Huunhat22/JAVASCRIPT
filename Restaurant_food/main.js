@@ -36,6 +36,7 @@ linklist.forEach(element => {
 });
 
 /* ======================== ACTIVE COLOR LINK OF MENU ON HEADER WHEN SCROLL WINDOWS ===========================*/
+/* debugger
 const sectionlist = document.querySelectorAll('section[id]');
 
 function activelink() {
@@ -47,10 +48,32 @@ function activelink() {
         sectionId = element.getAttribute('id');
 
         if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            document.querySelector('.header__menu header__menu-list a[href*=' + sectionId + ']').classList.add('header__menu-activelink');
+            document.querySelector('.header__menu-link').classList.add('header__menu-activelink');
         } else {
-            document.querySelector('.header__menu header__menu-list a[href*=' + sectionId + ']').classList.remove('header__menu-activelink');
+            document.querySelector('.header__menu-link').classList.remove('header__menu-activelink');
         }
     })
 }
-window.addEventListener('scroll', activelink);
+window.addEventListener('scroll', activelink); */
+
+/* ======================== BOX-SHADOW HEADER WHEN SCROLL===========================*/
+
+function changeheader(){
+    const scrollY = window.pageYOffset;
+    const nav = document.querySelector('header');
+    if( scrollY >= 200) {
+        nav.classList.add('header__scroll');
+    } else {
+        nav.classList.remove('header__scroll');
+    }
+}
+
+window.addEventListener('scroll',changeheader);
+
+/* ======================== ===========================*/
+function scrollTop(){
+    const scrollTop = document.querySelector('scrolltop');
+    // When the scroll is higher than 560 viewport height, add the show-scroll class to the a tag with the scroll-top class
+    if(this.scrollY >= 560) scrollTop.classList.add('show-scroll'); else scrollTop.classList.remove('show-scroll')
+}
+window.addEventListener('scroll', scrollTop);
