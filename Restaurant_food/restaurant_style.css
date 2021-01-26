@@ -33,6 +33,17 @@ img {
   font-size: 1.6rem;
 }
 
+/*========== Variables Dark theme ==========*/
+/*========== Button Dark/Light ==========*/
+.change-theme {
+  position: absolute;
+  right: 1rem;
+  top: 1.8rem;
+  color: var(--text-color);
+  font-size: 1rem;
+  cursor: pointer;
+}
+
 .logo {
   font-size: 1.7rem;
   font-weight: 500;
