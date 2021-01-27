@@ -1,0 +1,90 @@
+*{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins',Arial, Helvetica, sans-serif;
+    
+}
+[data-title]{
+    color: aqua;
+}
+
+.container{
+    margin: auto;
+    max-width: 1240px;
+}
+
+.DOM__1{
+    display: flex;
+    justify-content: space-between;
+    align-items: stretch;
+    margin: auto;
+    padding: 1rem;
+}
+.DOM__1,.DOM__2{
+    margin: 3rem 0;
+}
+.DOM__2{
+    padding: 1rem;
+    margin-bottom: 50rem;
+}
+
+.container .DOM__1 .item{
+    width: calc(50% - 50px);
+}
+
+.container.box{
+    box-shadow: 1px -1px 15px 7px;
+}
+p{
+    border: 1px solid #999;
+    padding: 10px;
+}
+p:nth-child(even){
+    margin: 1rem 0;
+}
+.btn{
+    padding: 10px;
+    margin: 20px 0;
+    cursor: pointer;
+}
+
+.btn.btn_dropdown{
+    border: none;
+    background-color: rgb(84, 232, 84);
+}
+
+.image_tana , .image_sunny{
+     width: 50%; 
+}
+
+a{
+    text-decoration: none;
+}
+
+li{
+    list-style: none;
+    padding: .5rem;
+
+    background-color: #cccccc;
+    
+}
+
+.dropdown{
+    position: relative;
+    margin-bottom: 50px;
+}
+.dropdown.drop .dropdown__menu{
+    display: block
+}
+.dropdown .dropdown__menu{
+    position: absolute;
+    left: 9%;
+    top: 20px;
+    border-radius: 2px;
+    display: none;
+}
+li:hover{
+    background-color: #999;
+}
