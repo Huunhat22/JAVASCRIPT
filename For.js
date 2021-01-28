@@ -103,3 +103,37 @@ var Sunlyo = {
 }
 Sunlyo.calltips();
 console.log(Sunlyo);
+
+/* ========= VÍ DỤ VỀ REDUCE() ======== */
+
+var courses = [
+    {
+        id:1,
+        name: 'Javascript',
+        coin: 100
+    },
+    {
+        id:1,
+        name: 'HTML5',
+        coin: 100
+    },
+    {
+        id:1,
+        name: 'SCSS',
+        coin: 100
+    },
+    {
+        id:1,
+        name: 'REACJS',
+        coin: 100
+    }
+];
+
+
+/* Tính tông coin của các object trong mảng */
+function sumcoin(acumulator,valueindex){
+    return acumulator + valueindex.coin;
+}
+
+var TotalCoin = courses.reduce(sumcoin,0);
+console.log('Tổng coin sau khi tính toán = ',TotalCoin);
