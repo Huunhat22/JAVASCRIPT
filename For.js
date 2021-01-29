@@ -115,17 +115,17 @@ var courses = [
     {
         id:1,
         name: 'HTML5',
-        coin: 100
+        coin: 120
     },
     {
         id:1,
         name: 'SCSS',
-        coin: 100
+        coin: 140
     },
     {
         id:1,
         name: 'REACJS',
-        coin: 100
+        coin: 160
     }
 ];
 
