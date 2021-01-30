@@ -137,3 +137,36 @@ function sumcoin(acumulator,valueindex){
 
 var TotalCoin = courses.reduce(sumcoin,0);
 console.log('Tổng coin sau khi tính toán = ',TotalCoin);
+
+
+/* ============ thực hành về String / Array include() ================= */
+console.log(' ======= thực hành về String / Array include() ==========');
+ var courses = ['vohuunhat', 'ngothibinhduong'];
+ 
+ console.log('trong chuôi trên có tồn tại hay không : ',courses.includes('vohuunhat'));
+
+ /* ============ thực hành về Math() object ================= */
+ /* 
+    Math() Object
+    - Math.PI
+    - Math.round()
+    - Math.abs()
+    - Math.ceil() làm tròn trên
+    - Math.floor() làm tròn duói
+    - Math.random() ngẫu nhiên
+    - Math.min()
+    - Math.max()
+ */
+ console.log(' ======= thực hành về Math() Object ==========');
+var randomtest = Math.floor(Math.random() * 5);
+console.log('Số ngẫu nhiên tạo ra : ',randomtest);
+
+var coin = [
+    '5 coin',
+    '15 coin',
+    '25 coin',
+    '35 coin',
+    '45 coin', 
+];
+
+console.log('Số Điểm tương ứng được sinh ngẫu nhiên : ',coin[randomtest]);
