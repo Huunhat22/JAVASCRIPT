@@ -135,8 +135,19 @@ function sumcoin(acumulator,valueindex){
     return acumulator + valueindex.coin;
 }
 
+/* hàm trả về 1 mảng mới */
+const arraysubject = (courses)=>{
+    return courses.reduce((itemMap,item) => {
+        itemMap[item.name] = item.coin;
+        return itemMap;
+    },{}); 
+}; 
+
 var TotalCoin = courses.reduce(sumcoin,0);
 console.log('Tổng coin sau khi tính toán = ',TotalCoin);
+
+/* trả về 1 mảng mới */
+console.log(arraysubject(courses));
 
 
 /* ============ thực hành về String / Array include() ================= */
