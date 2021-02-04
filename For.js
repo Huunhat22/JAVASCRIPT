@@ -149,6 +149,24 @@ console.log('Tổng coin sau khi tính toán = ', TotalCoin);
 /* trả về 1 mảng mới */
 console.log(arraysubject(courses));
 
+/* ============ thực hành về Reduce() ================= */
+console.log(' ======= thực hành về Reduce() ==========');
+
+var arrayNumber = [60,3,4,6,51,8,12,21,31];
+/* function findmax(list){
+    var max = list[0];
+    for (var index = 0; index < list.length; index++) {
+        if ( list[index] > max) {
+            max = list[index];
+        } 
+    }
+    return max
+} */
+/* const findmax = Math.max(...arrayNumber);
+console.log(findmax); */
+var totall = reduce(arrayNumber,0);
+console.log('giá trị lơn nhất trong mảng trên :',totall);
+
 
 /* ============ thực hành về String / Array include() ================= */
 console.log(' ======= thực hành về String / Array include() ==========');
