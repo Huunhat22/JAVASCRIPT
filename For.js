@@ -152,7 +152,16 @@ console.log(arraysubject(courses));
 /* ============ thực hành về Reduce() ================= */
 console.log(' ======= thực hành về Reduce() ==========');
 
-var arrayNumber = [60,3,4,6,51,8,12,21,31];
+var arrayNumber = [-1,60,3,4,6,51,8,12,21,31];
+/* Tổng giá trị của các phần tử trong mảng */
+var Sumitem = arrayNumber.reduce(
+    function(acc,cur){
+        return acc + cur;
+    }
+);
+console.log('Tổng giá trị của các phần tử trong mảng : ',Sumitem);
+
+/* Tìm giá Max - Min của Mảng */
 /* function findmax(list){
     var max = list[0];
     for (var index = 0; index < list.length; index++) {
@@ -164,15 +173,20 @@ var arrayNumber = [60,3,4,6,51,8,12,21,31];
 } */
 /* const findmax = Math.max(...arrayNumber);
 console.log(findmax); */
-var totall = reduce(arrayNumber,0);
-console.log('giá trị lơn nhất trong mảng trên :',totall);
+const findmax = arrayNumber.reduce(
+    function(acc,cur){
+        return Math.max(acc,cur);
+    }
+);
+
+console.log('Giá trị lơn nhất trong mảng trên :',findmax);
 
 
 /* ============ thực hành về String / Array include() ================= */
 console.log(' ======= thực hành về String / Array include() ==========');
 var courses = ['vohuunhat', 'ngothibinhduong'];
 
-console.log('trong chuôi trên có tồn tại hay không : ', courses.includes('vohuunhat'));
+console.log('Trong chuôi trên có tồn tại hay không : ', courses.includes('vohuunhat'));
 
 /* ============ thực hành về Math() object ================= */
 /* 
