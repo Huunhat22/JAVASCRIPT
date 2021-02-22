@@ -7,7 +7,7 @@ calavergare = function () {
     for (key in this.scores) {
         total += 1;
         // console.log('Key = ',key); // hiển thị các thuộc tính có trong scores
-        // console.log('Scores ' + key + ' =', this.scores[key]); // hiển thị dữ liệu của thực thuộc tính cho trong scores
+        console.log('Scores ' + key + ' =', this.scores[key]); // hiển thị dữ liệu của thực thuộc tính cho trong scores
         totalscores = totalscores + this.scores[key];
     }
     return totalscores / total;
