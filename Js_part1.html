@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Begin JS</title>
+</head>
+<body>
+    <p id="demo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem inventore repellendus illo mollitia nihil ratione laudantium repellat. Atque, laboriosam. Nemo dolores laboriosam omnis totam cupiditate tempora et perspiciatis dolor non.</p>
+    <script type="text/javascript">
+    debugger
+        var persion = {
+            firstname:'vo',
+            lastname:'nhat',
+            birthday:'30/07/1995',
+            countries:'binhthuan',
+            fullname: function(){
+                return this.firstname +" " + this.lastname
+            }
+        }
+        console.log(persion);
+        document.getElementById("demo").innerHTML = persion.fullname();
+    </script>
+</body>
+</html>
