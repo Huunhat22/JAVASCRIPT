@@ -8,8 +8,10 @@
 </head>
 <body>
     <p id="demo">Lorem ipsum dolor sit amet consectetur adipisicing elit. Rem inventore repellendus illo mollitia nihil ratione laudantium repellat. Atque, laboriosam. Nemo dolores laboriosam omnis totam cupiditate tempora et perspiciatis dolor non.</p>
+    <p id="demo1">Test callback</p>
+    <p id="demo2">Test callback2</p>
     <script type="text/javascript">
-    debugger
+    
         var persion = {
             firstname:'vo',
             lastname:'nhat',
@@ -21,6 +23,22 @@
         }
         console.log(persion);
         document.getElementById("demo").innerHTML = persion.fullname();
+        
+        debugger
+        function doHomework(subject, callback) {
+            setTimeout( function(){
+                document.getElementById('demo1').innerHTML = "Bắt đầu làm bài tập " + `${subject}`;
+                // console.log(`Bắt đầu làm bài tập ${subject}.`);
+                callback();
+            }, 5000);
+            
+        }
+
+        function alertFinished(){
+            document.getElementById('demo2').innerHTML = "làm bài tập ";
+            // console.log('Làm bài tập xong!');
+        }
+        doHomework('Toán', alertFinished);
     </script>
 </body>
 </html>
