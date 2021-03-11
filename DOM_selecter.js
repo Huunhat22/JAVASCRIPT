@@ -1,7 +1,7 @@
 // Truy xuất phần tử bằng javascript dùng selector của css
 /*
     có thể sử dụng cách này để thay thế cho việc truy xuất trong file main.js
-    - getElementByClassId
+    - getElementById
     - getElementByClassName
     - getElementByTagName
 
@@ -43,7 +43,7 @@ for(var index =0; index < eldatatitle.length; index++){
 console.log("temp : ",temp); // Bi du 1 khoang trang cuoi cung phia sau chuoi
 
 // set gia tri data-title mới cho #demo và cắt khoảng trắng đầu và cuối
-//document.getElementById("demo").setAttribute("class",temp.trim()); //dùng để thêm class vào id của element
+document.getElementById("demo").setAttribute("class",temp.trim()); //dùng để thêm class vào id của element
 console.log(eldatatitle);
 
 //Thực hành thay thế thuộc tính màu sắc với thẻ P với javascript
@@ -101,6 +101,7 @@ var imge = document.querySelector(".image_tana");
 function addclass(element , classname){
     // console.log(element, classname);
     var oldclass = element.getAttribute('class');
+    debugger
     if (oldclass) {
         // khác null -> có nghĩa là đã có class rồi thì nối chuỗi thêm 1 class mới
         /* chỗ nãy sẽ kiểm lỗi như sau:
