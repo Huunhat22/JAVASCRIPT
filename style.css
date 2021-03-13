@@ -80,7 +80,7 @@ li{
 }
 .dropdown .dropdown__menu{
     position: absolute;
-    left: 9%;
+    left: 7rem;
     top: 20px;
     border-radius: 2px;
     display: none;
