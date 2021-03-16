@@ -1,0 +1,39 @@
+*{
+    box-sizing: border-box;
+}
+
+.dropdownlist{
+    max-width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    &_example1{
+        border-radius: 2px;
+        background-color: turquoise;
+        border: none;
+        color: black;
+        font-size: 20px;
+        padding: 10px;
+        outline: none;
+        cursor: pointer;
+    }
+    &_btn{
+        border-radius: 2px;
+        background-color: turquoise;
+        border: none;
+        color: black;
+        font-size: 20px;
+        padding: 10px;
+        outline: none;
+        cursor: pointer;
+    }
+    &_example2{
+        position: relative;
+    }
+    &_menu{
+        position: absolute;
+        top: 0;
+        left: 152px;
+        // display: none;
+    }
+}

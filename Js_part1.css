@@ -1,0 +1,50 @@
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.dropdownlist {
+  max-width: 30%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.dropdownlist_example1 {
+  border-radius: 2px;
+  background-color: turquoise;
+  border: none;
+  color: black;
+  font-size: 20px;
+  padding: 10px;
+  outline: none;
+  cursor: pointer;
+}
+
+.dropdownlist_btn {
+  border-radius: 2px;
+  background-color: turquoise;
+  border: none;
+  color: black;
+  font-size: 20px;
+  padding: 10px;
+  outline: none;
+  cursor: pointer;
+}
+
+.dropdownlist_example2 {
+  position: relative;
+}
+
+.dropdownlist_menu {
+  position: absolute;
+  top: 0;
+  left: 152px;
+}
+/*# sourceMappingURL=Js_part1.css.map */

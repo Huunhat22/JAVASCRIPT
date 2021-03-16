@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Js_part1.css">
     <title>Begin JS</title>
 </head>
 <body>
@@ -11,6 +12,22 @@
     <p id="demo1">Test callback</p>
     <p id="demo2">Test callback2</p>
     <p id="demo3">Test callback3</p>
+    <section class="dropdownlist">
+        <form action="" >
+            <select name="Year" class="dropdownlist_example1"></select>
+        </form>
+        <div class="dropdownlist_example2">
+            <button class="dropdownlist_btn">Dropdown List</button>
+            <ul class="dropdownlist_menu">
+                    <li><a href="#">dropdown 1</a></li>
+                    <li><a href="#">dropdown 2</a></li>
+                    <li><a href="#">dropdown 3</a></li>
+                    <li><a href="#">dropdown 4</a></li>
+            </ul>
+        </div>
+    </section>
+    
+
     <script type="text/javascript">
     
         var persion = {
@@ -43,6 +60,19 @@
 
         var getdate = Date();
         document.getElementById('demo3').innerHTML = getdate;
+
+        /*--------------------------------------------------------------------------------------*/
+        /* Cách tạo 1 select box */
+        var getyears = document.querySelector('select[name ="Year"]');
+        
+        for (var index = 1990; index < 2020; index++) {
+            /* tạo ra 1 opiton mới, gán value cho option, gán innertex cho thẻ opiton*/
+            let newoption = document.createElement('option');
+            newoption.setAttribute('value',index);
+            newoption.innerText = 'Năm' + " " + index;
+            getyears.append(newoption);
+        }
+
     </script>
 </body>
 </html>
