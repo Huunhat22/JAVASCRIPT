@@ -46,5 +46,29 @@
   position: absolute;
   top: 0;
   left: 152px;
+  margin: 0;
+  padding: 0;
+  display: none;
+}
+
+.dropdownlist_menu > li {
+  list-style: none;
+  padding: 10px;
+  width: 100px;
+  background-color: #cccccc;
+}
+
+.dropdownlist_menu > li > a {
+  text-decoration: none;
+  color: black;
+  font-size: 15px;
+}
+
+.dropdownlist_menu > li:hover {
+  background-color: #cfa0a0;
+}
+
+.dropdownlist_menu--turn {
+  display: block;
 }
 /*# sourceMappingURL=Js_part1.css.map */

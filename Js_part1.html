@@ -19,10 +19,10 @@
         <div class="dropdownlist_example2">
             <button class="dropdownlist_btn">Dropdown List</button>
             <ul class="dropdownlist_menu">
-                    <li><a href="#">dropdown 1</a></li>
-                    <li><a href="#">dropdown 2</a></li>
-                    <li><a href="#">dropdown 3</a></li>
-                    <li><a href="#">dropdown 4</a></li>
+                <li><a href="#">Dropdown 1</a></li>
+                <li><a href="#">Dropdown 2</a></li>
+                <li><a href="#">Dropdown 3</a></li>
+                <li><a href="#">Dropdown 4</a></li>
             </ul>
         </div>
     </section>
@@ -72,6 +72,20 @@
             newoption.innerText = 'Năm' + " " + index;
             getyears.append(newoption);
         }
+
+        /*--------------------------------------------------------------------------------------*/
+        /* Cách tạo 1 seclect box customize - thêm class mới khi có sự kiện click -> nếu có class rồi thì xóa đi */
+        var dropdownlist = document.querySelector('.dropdownlist_btn');
+        // console.log(dropdownlist);
+        dropdownlist.addEventListener('click',function (e){
+            var getmenu = document.querySelector('.dropdownlist_menu');
+            getmenu.classList.toggle('dropdownlist_menu--turn');
+
+            // var getelment = document.querySelector('ul');
+            // getelment.setAttribute('class','dropdownlist_menu');
+        })
+
+        
 
     </script>
 </body>
