@@ -66,6 +66,7 @@
 
 .dropdownlist_menu > li:hover {
   background-color: #cfa0a0;
+  cursor: pointer;
 }
 
 .dropdownlist_menu--turn {
