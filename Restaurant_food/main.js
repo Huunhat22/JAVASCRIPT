@@ -36,7 +36,7 @@ linklist.forEach(element => {
 });
 
 /* ======================== ACTIVE COLOR LINK OF MENU ON HEADER WHEN SCROLL WINDOWS ===========================*/
-debugger
+
 const sectionlist = document.querySelectorAll('section[id]');
 
 function activelink() {
