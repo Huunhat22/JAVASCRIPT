@@ -36,7 +36,7 @@ linklist.forEach(element => {
 });
 
 /* ======================== ACTIVE COLOR LINK OF MENU ON HEADER WHEN SCROLL WINDOWS ===========================*/
-/* debugger
+debugger
 const sectionlist = document.querySelectorAll('section[id]');
 
 function activelink() {
@@ -47,14 +47,14 @@ function activelink() {
         const sectionTop = element.offsetTop - 50;
         sectionId = element.getAttribute('id');
 
-        if (scrollY > sectionTop && scrollY <= sectionTop + sectionHeight) {
-            document.querySelector('.header__menu-link').classList.add('header__menu-activelink');
-        } else {
-            document.querySelector('.header__menu-link').classList.remove('header__menu-activelink');
+        if(scrollY > sectionTop && scrollY <= sectionTop + sectionHeight){
+            document.querySelector('.header__menu a[href*=' + sectionId + ']').classList.add('header__menu-activelink')
+        }else{
+            document.querySelector('.header__menu a[href*=' + sectionId + ']').classList.remove('header__menu-activelink')
         }
     })
 }
-window.addEventListener('scroll', activelink); */
+window.addEventListener('scroll', activelink);
 
 /* ======================== BOX-SHADOW HEADER WHEN SCROLL===========================*/
 
@@ -112,4 +112,21 @@ themeButton.addEventListener('click', () => {
     // We save the theme and the current icon that the user chose
     localStorage.setItem('selected-theme', getCurrentTheme())
     localStorage.setItem('selected-icon', getCurrentIcon())
+})
+
+/*==================== SCROLL REVEAL ANIMATION ====================*/
+const sr = ScrollReveal({
+    origin: 'top',
+    distance: '30px',
+    duration: 2000,
+    reset: true
+});
+
+sr.reveal(`.home__info, .home__image,
+            .about__info, .about__image,
+            .services__item, .menu__item,
+            .feature__info, .app__image,
+            .contact__info, .contact__button,
+            .footer__item`, {
+    interval: 200
 })
