@@ -1,0 +1,114 @@
+*{
+    box-sizing: border-box;
+}
+
+html{
+    font-size: 62.5%;
+}
+
+body{
+    width: 100%;
+    height: 100vh;
+    font-family: 'Poppins',sans-serif;
+    background-image: linear-gradient(to right top, #ff4984, #ffc781, #fff);
+}
+
+.Signup{
+    max-width: 500px;
+    margin: 20rem auto;
+    background-color: #fff;
+    border-radius: 2rem;
+    padding: 5rem 3rem;
+    &__heading{
+        text-align: center;
+        font-size: 3rem;
+        font-weight: bold;
+        margin-bottom: 2.5rem;
+    }
+    &__text{
+        text-align: center;
+        font-size: 1.5rem;
+        margin-bottom: 2.5rem;
+        font-weight: bold;
+    }
+    &__signin{
+        color: #00aedf;
+    }
+    &__form{
+        &-group{
+            margin-bottom: 1.5rem;
+            &--2{
+                display: flex;
+                justify-content: space-between;
+                > input{
+                    width: calc(50% - 2.5px);
+                    &:first-child{
+                        border-top-right-radius: 0;
+                        border-bottom-right-radius: 0;
+                    }
+                    &:last-child{
+                        border-top-left-radius: 0;
+                        border-bottom-left-radius: 0;
+                    }
+                }
+            }
+        }
+        
+        &-input{
+            font-family: 'Poppins',sans-serif;
+            padding: 1.3rem;
+            border: 1px solid transparent;
+            border-radius: .5rem;
+            color: black;
+            outline: none;
+            width: 100%;
+            background-color: #e4e1e1;
+            transition: background-color 0.25s linear;
+            &:focus{
+                border-color: #eee;
+                background-color: #fff;
+            }
+            &::-webkit-input-placeholder{
+                color: #ccc;
+                font-style: italic;
+            }
+        }
+        &-submit{
+            text-align: center;
+            border-radius: .5rem;
+            border: none;
+            outline: none;
+            padding: 1.3rem;
+            width: 100%;
+            background-color:  rgb(86, 52, 241);
+            color:#fff;
+            font-family: 'Poppins',sans-serif;
+            font-size: 2rem;
+            cursor: pointer;
+            margin: 0 auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        &-span{
+            margin: 0 auto;
+        }
+        &-check{
+            margin: 0;
+        }
+        &-label{
+            margin-left: 5px;
+            font-size: 1.5rem;
+        }
+        &-term{
+            color: #00aedf;
+            font-weight: bold;
+            text-decoration: none;
+        }
+        &-message{
+            display: block;
+        }
+    }
+    
+}
+

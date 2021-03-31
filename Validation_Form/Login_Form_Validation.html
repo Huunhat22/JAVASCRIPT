@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login_Form</title>
+    <link rel="stylesheet" href="/Learning_Web/HTML/css/reset.css">
+    <link rel="stylesheet" href="Login_Form.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <div class="Signup">
+        <h2 class="Signup__heading">Create account</h2>
+        <p class="Signup__text">Already have an account? <a href="#" class="Signup__signin">Sign in</a></p>
+        <form action="#" class="Signup__form" id="form_signup">
+            <div class="Signup__form-group">
+                <input type="text" class="Signup__form-input" placeholder="Middle Name" id="middlename">
+                <span class="Signup__form-message"></span>
+            </div>
+            <div class="Signup__form-group Signup__form-group--2">
+                <input type="text" class="Signup__form-input" placeholder="First Name">
+                <input type="text" class="Signup__form-input" placeholder="Last Name">
+            </div>
+            <div class="Signup__form-group">
+                <input type="text" class="Signup__form-input" placeholder="Email" id="email">
+                <span class="Signup__form-message"></span>
+            </div>
+            <div class="Signup__form-group">
+                <input type="text" class="Signup__form-input" placeholder="Password" id="password">
+                <span class="Signup__form-message"></span>
+            </div>
+            <div class="Signup__form-group">
+                <input type="text" class="Signup__form-input" placeholder="Confirm Password" id="confirmpassword">
+                <span class="Signup__form-message"></span>
+            </div>
+            <div class="Signup__form-group">
+                <button class="Signup__form-submit">
+                   <span class="Signup__form-span"> Sign in </span><i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                </button>
+            </div>
+            <div class="Signup__form-service">
+                <input type="checkbox" class="Signup__form-check" id="check">
+                <label for="check" class="Signup__form-label">I have read and agree to the 
+                    <a href="#" class="Signup__form-term">Term of service</a>
+                </label>
+            </div>
+        </form>
+    </div>
+    <script src="Script_validation.js"></script>
+    <script>
+
+        /* Mong muốn của mình - đây là 1 object */
+        Validator({
+            form: '#form_signup',
+            rules: [
+                Validator.isRequired('#middlename'),
+                Validator.isEmail('#email'),
+            ]
+        });
+    </script>
+</body>
+</html>
