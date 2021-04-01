@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login_Form</title>
-    <link rel="stylesheet" href="/Learning_Web/HTML/css/reset.css">
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="Login_Form.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
@@ -49,12 +49,17 @@
     <script src="Script_validation.js"></script>
     <script>
 
-        /* Mong muốn của mình - đây là 1 object */
+        /* Mong muốn của mình - đây là 1 object (Constructor) - Nếu quên kiến thức về object thì xem lại các ví dụ trước.
+            Key : value
+         */
         Validator({
             form: '#form_signup',
             rules: [
+                // đây là 1 mảng chứa các phần tử , mỗi phần tử là 1 function.
                 Validator.isRequired('#middlename'),
                 Validator.isEmail('#email'),
+                Validator.isRequired('#password'),
+                Validator.isRequired('#confirmpassword'),
             ]
         });
     </script>
