@@ -68,10 +68,6 @@ body {
   border-bottom-left-radius: 0;
 }
 
-.Signup__form-group--2 > span {
-  display: block;
-}
-
 .Signup__form-input {
   font-family: 'Poppins',sans-serif;
   padding: 1.3rem;
@@ -93,6 +89,10 @@ body {
 .Signup__form-input::-webkit-input-placeholder {
   color: #ccc;
   font-style: italic;
+}
+
+.Signup__form-input.validate {
+  border: 1px solid red;
 }
 
 .Signup__form-submit {
@@ -140,5 +140,9 @@ body {
 
 .Signup__form-message {
   display: block;
+  padding-top: 7px;
+  color: red;
+  font-family: 'Poppins';
+  font-size: 15px;
 }
 /*# sourceMappingURL=Login_Form.css.map */

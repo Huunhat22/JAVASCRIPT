@@ -72,6 +72,10 @@ body{
                 color: #ccc;
                 font-style: italic;
             }
+            
+        }
+        &-input.validate{
+            border: 1px solid red;
         }
         &-submit{
             text-align: center;
@@ -107,7 +111,12 @@ body{
         }
         &-message{
             display: block;
+            padding-top: 7px;
+            color: red;
+            font-family: 'Poppins';
+            font-size: 15px;
         }
+        
     }
     
 }
