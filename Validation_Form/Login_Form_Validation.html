@@ -26,16 +26,16 @@
                 <span class="Signup__form-message"></span>
             </div>
             <div class="Signup__form-group">
-                <input type="text" class="Signup__form-input" placeholder="Password" id="password">
+                <input type="password" class="Signup__form-input" placeholder="Password" id="password">
                 <span class="Signup__form-message"></span>
             </div>
             <div class="Signup__form-group">
-                <input type="text" class="Signup__form-input" placeholder="Confirm Password" id="confirmpassword">
+                <input type="password" class="Signup__form-input" placeholder="Confirm Password" id="confirmpassword">
                 <span class="Signup__form-message"></span>
             </div>
             <div class="Signup__form-group">
                 <button class="Signup__form-submit">
-                   <span class="Signup__form-span"> Sign in </span><i class="fa fa-long-arrow-right" aria-hidden="true"></i>
+                   <span class="Signup__form-span"> Sign up </span><i class="fa fa-long-arrow-right" aria-hidden="true"></i>
                 </button>
             </div>
             <div class="Signup__form-service">
@@ -54,11 +54,12 @@
          */
         Validator({
             form: '#form_signup',
+            errorSelector : '.Signup__form-message',
             rules: [
                 // đây là 1 mảng chứa các phần tử , mỗi phần tử là 1 function.
                 Validator.isRequired('#middlename'),
                 Validator.isEmail('#email'),
-                Validator.isRequired('#password'),
+                Validator.minlenght('#password',6),
                 Validator.isRequired('#confirmpassword'),
             ]
         });
