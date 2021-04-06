@@ -57,10 +57,14 @@
             errorSelector : '.Signup__form-message',
             rules: [
                 // đây là 1 mảng chứa các phần tử , mỗi phần tử là 1 function.
-                Validator.isRequired('#middlename'),
+                Validator.isRequired('#middlename','Vui lòng nhập Middle Name'),
+                Validator.isRequired('#email'),
                 Validator.isEmail('#email'),
                 Validator.minlenght('#password',6),
                 Validator.isRequired('#confirmpassword'),
+                Validator.isConfirmed('#confirmpassword',function(){
+                    return document.querySelector('#form_signup #password').value;
+                },'Mật khẩu không chính xác, vui lòng nhập lại')
             ]
         });
     </script>
