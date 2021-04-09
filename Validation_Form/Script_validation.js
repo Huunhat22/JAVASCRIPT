@@ -32,11 +32,46 @@ function Validator(options){
             errorElement.innerText = '';
             inputElement.classList.remove('validate');
         }
+        return !errorMessage; //convert sang kiểu boolean -> nếu có errorMessage thì là true, ngược lại là fasle
     }
 
     // Lấy Element của form cần validate
     var formElement = document.querySelector(options.form);
     if (formElement) {
+
+        /* Khi submit Form */
+        formElement.addEventListener('submit',function (e) {
+            e.preventDefault(); // Bỏ qua sự kiện mặc định của form
+
+            var isFormValid = true; // không có lỗi
+
+
+            /*Lặp qua từng rule và validate */
+            options.rules.forEach(rule => {
+                var inputElement = formElement.querySelector(rule.selector);
+                // validate(inputElement,rule);
+
+                var isValid = validate(inputElement,rule);
+                if (!isValid) {                     /* Nếu có 1 elemnt mà báo lỗi */
+                    isFormValid = false;
+                }
+            })
+
+            if (isFormValid) {
+                if (typeof options.onSubmit === 'function') {
+
+                    var enableInputs = formElement.querySelectorAll('[name]');
+                    
+                    var formValues = Array.from(enableInputs).reduce(function(values,input){
+                        return (values[input.name] = input.value) && values;
+                    }, {});
+                    
+                    options.onSubmit(formValues);
+                }
+            }
+        })
+
+        /* Lặp qua mỗi rule và xử lý (Lắng nghe các sự kiện blur, input) */
         options.rules.forEach(rule => {
             // console.log(rule.selector);
 

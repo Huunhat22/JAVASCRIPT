@@ -12,7 +12,7 @@
     <div class="Signup">
         <h2 class="Signup__heading">Create account</h2>
         <p class="Signup__text">Already have an account? <a href="#" class="Signup__signin">Sign in</a></p>
-        <form action="#" class="Signup__form" id="form_signup">
+        <form action="" method="POST" class="Signup__form" id="form_signup">
             <div class="Signup__form-group">
                 <input type="text" class="Signup__form-input" placeholder="Middle Name" id="middlename">
                 <span class="Signup__form-message"></span>
@@ -65,7 +65,10 @@
                 Validator.isConfirmed('#confirmpassword',function(){
                     return document.querySelector('#form_signup #password').value;
                 },'Mật khẩu không chính xác, vui lòng nhập lại')
-            ]
+            ],
+            onSubmit: function(data){
+                console.log(data);
+            }
         });
     </script>
 </body>
