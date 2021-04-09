@@ -55,8 +55,9 @@ function Validator(options){
                 if (!isValid) {                     /* Nếu có 1 elemnt mà báo lỗi */
                     isFormValid = false;
                 }
-            })
+            });
 
+            // debugger
             if (isFormValid) {
                 if (typeof options.onSubmit === 'function') {
 
