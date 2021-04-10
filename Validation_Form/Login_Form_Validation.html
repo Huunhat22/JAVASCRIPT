@@ -21,7 +21,7 @@
                 <input type="text" class="Signup__form-input" name="firstname" placeholder="First Name">
                 <input type="text" class="Signup__form-input" name="lastname" placeholder="Last Name">
             </div>
-            <div class="Signup__form-group">
+            <div class="Signup__form-group">   
                 <input type="text" class="Signup__form-input" name="email" placeholder="Email" id="email">
                 <span class="Signup__form-message"></span>
             </div>
@@ -68,7 +68,9 @@
             ],
             onSubmit: function(data){
                 console.log(data);
-            }
+            },
+            formGroupSelector: '.Signup__form-group'
+
         });
     </script>
 </body>

@@ -2,6 +2,16 @@
 //định nghĩa đối tượng
 function Validator(options){
 
+    /* Hàm dùng để lấy ra được parentElement kể cả khi thẻ input có nhiều thẻ cha (nhiều cấp)  */
+    function getParent(element,selector){
+        while(element.parentElement){
+            if (element.parentElement.matches(selector)) {
+                return element.parentElement;
+            }
+            element = element.parentElement;
+        }
+    }
+
     // khai báo 1 hàm là 1 object rỗng -> sử dụng để 1 input áp dụng được nhiều rules
     var selectorRules = {};
 
@@ -9,7 +19,7 @@ function Validator(options){
     function validate(inputElement,rule) {
         /*  var errorMessage = rule.test(inputElement.value); */         /* Value ở đây là properties của thẻ input, 
                                                                          errorMessage ở đây là giá trị trả về của hàm test()      */
-        var errorElement = inputElement.parentElement.querySelector(options.errorSelector); 
+        var errorElement = getParent(inputElement,options.formGroupSelector).querySelector(options.errorSelector); 
         var errorMessage;
         
         
@@ -64,7 +74,8 @@ function Validator(options){
                     var enableInputs = formElement.querySelectorAll('[name]');
                     
                     var formValues = Array.from(enableInputs).reduce(function(values,input){
-                        return (values[input.name] = input.value) && values;
+                        values[input.name] = input.value
+                        return values;
                     }, {});
                     
                     options.onSubmit(formValues);
