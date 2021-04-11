@@ -34,6 +34,17 @@
                 <span class="Signup__form-message"></span>
             </div>
             <div class="Signup__form-group">
+                <div class="Signup__form-group--2">
+                    <span>Name</span>
+                    <input type="radio" class="Signup__form-input" name="gender" value="male">
+                    <span>Nữ</span>
+                    <input type="radio" class="Signup__form-input" name="gender" value="female">
+                    <span>Khác</span>
+                    <input type="radio" class="Signup__form-input" name="gender" value="orther">
+                </div>
+                <span class="Signup__form-message"></span>
+            </div>
+            <div class="Signup__form-group">
                 <button class="Signup__form-submit">
                    <span class="Signup__form-span"> Sign up </span><i class="fa fa-long-arrow-right" aria-hidden="true"></i>
                 </button>
@@ -64,7 +75,8 @@
                 Validator.isRequired('#confirmpassword'),
                 Validator.isConfirmed('#confirmpassword',function(){
                     return document.querySelector('#form_signup #password').value;
-                },'Mật khẩu không chính xác, vui lòng nhập lại')
+                },'Mật khẩu không chính xác, vui lòng nhập lại'),
+                Validator.isRequired('input[name="gender"]'),
             ],
             onSubmit: function(data){
                 console.log(data);

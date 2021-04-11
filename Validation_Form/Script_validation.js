@@ -29,8 +29,17 @@ function Validator(options){
         // Lặp qua từng rule và kiểm tra
         for (let i = 0; i < rules.length; i++) {
             
-            errorMessage = rules[i](inputElement.value);
-
+            //Code check cho radio
+            switch(inputElement.type){
+                case 'radio':
+                case 'checkbox':
+                    errorMessage = rules[i](
+                        formElement.querySelector(rule.selector + ':checked')
+                    );
+                    break;
+                default:
+                    errorMessage = rules[i](inputElement.value);    
+            }
             // Nếu mà có lỗi thì dừng kiểm tra và thoát.
             if(errorMessage) break;
         }
@@ -134,7 +143,7 @@ Validator.isRequired = function (selector,message){
     return {
         selector : selector,
         test: function (value){           /* value ở đây là giá trị người dùng nhập vào input */
-            return value.trim() ? undefined : message || 'Vui lòng nhập trường này'
+            return value ? undefined : message || 'Vui lòng nhập trường này'
         }
     }
 }
